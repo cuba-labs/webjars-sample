@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        xmlns:custom="http://schemas.company.com/webjarssample/0.1/ui-component.xsd"
+        caption="msg://caption"
+        class="com.company.webjarssample.web.screens.CarouselDemoPage"
+        messagesPack="com.company.webjarssample.web.screens">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="spacer">
+        <label value="An example of serving web resources from WebJars" stylename="h2"/>
+
+        <hbox spacing="true">
+            <label value="Here we use the 'jrcarousel' WebJar:" align="MIDDLE_LEFT" stylename="h3"/>
+            <link url="https://github.com/vinayakjadhav/jRCarousel" caption="GitHub" align="MIDDLE_LEFT"/>
+        </hbox>
+
+        <custom:carousel width="500px" height="400px"/>
+        <label id="spacer"/>
+    </layout>
+</window>
