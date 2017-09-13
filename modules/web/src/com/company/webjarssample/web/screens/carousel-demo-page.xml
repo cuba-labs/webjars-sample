@@ -6,15 +6,35 @@
         messagesPack="com.company.webjarssample.web.screens">
     <dialogMode height="600"
                 width="800"/>
-    <layout spacing="true" expand="spacer">
-        <label value="An example of serving web resources from WebJars" stylename="h2"/>
+    <layout expand="spacer"
+            spacing="true">
+        <label value="An example of serving web resources from WebJars"
+               stylename="h2"/>
 
         <hbox spacing="true">
-            <label value="Here we use the 'jrcarousel' WebJar:" align="MIDDLE_LEFT" stylename="h3"/>
-            <link url="https://github.com/vinayakjadhav/jRCarousel" caption="GitHub" align="MIDDLE_LEFT"/>
+            <label align="MIDDLE_LEFT"
+                   stylename="h3"
+                   value="Here we use the 'jrcarousel' WebJar:"/>
+            <link align="MIDDLE_LEFT"
+                  caption="GitHub"
+                  url="https://github.com/vinayakjadhav/jRCarousel"/>
         </hbox>
 
-        <custom:carousel width="500px" height="400px"/>
+        <custom:carousel animation="ZOOM_IN_SLIDE"
+                         navigation="SQUARES"
+                         height="400px"
+                         width="500px">
+            <custom:items>
+                <custom:item url="VAADIN/images/1.jpg"/>
+                <custom:item url="VAADIN/images/2.jpg"/>
+                <custom:item url="VAADIN/images/3.jpg"/>
+                <custom:item url="VAADIN/images/4.jpg"/>
+                <custom:item url="VAADIN/images/5.jpg"/>
+                <custom:item url="VAADIN/images/6.jpg"/>
+                <custom:item url="VAADIN/images/7.jpg"/>
+            </custom:items>
+        </custom:carousel>
+
         <label id="spacer"/>
     </layout>
 </window>

@@ -9,10 +9,49 @@
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="cuba:baseComponent">
+                    <xs:sequence>
+                        <xs:element type="carouselItems"
+                                    name="items"/>
+                    </xs:sequence>
+                    <xs:attribute name="items"
+                                  type="carouselItems"/>
+
                     <xs:attribute name="id"
                                   type="xs:string"/>
+                    <xs:attribute name="animation"
+                                  type="animationType"/>
+                    <xs:attribute name="navigation"
+                                  type="navigationType"/>
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="animationType">
+        <xs:restriction>
+            <xs:enumeration value="SCROLL"/>
+            <xs:enumeration value="SLIDE"/>
+            <xs:enumeration value="FADE"/>
+            <xs:enumeration value="ZOOM_IN_SLIDE"/>
+            <xs:enumeration value="ZOOM_IN_SCROLL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="navigationType">
+        <xs:restriction>
+            <xs:enumeration value="CIRCLES"/>
+            <xs:enumeration value="SQUARES"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="carouselItems">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="url" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="count" type="xs:int"/>
+    </xs:complexType>
 </xs:schema>
