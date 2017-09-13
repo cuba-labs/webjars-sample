@@ -8,7 +8,7 @@
       maxIdle="2"
       maxWaitMillis="5000"
       driverClassName="org.hsqldb.jdbc.JDBCDriver"
-      url="jdbc:hsqldb:hsql://localhost/webjarssample"
+      url="jdbc:hsqldb:hsql://localhost:9111/webjarssample"
       username="sa"
       password=""/>
 

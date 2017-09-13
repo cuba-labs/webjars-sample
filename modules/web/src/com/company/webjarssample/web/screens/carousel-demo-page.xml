@@ -17,6 +17,7 @@
                    value="Here we use the 'jrcarousel' WebJar:"/>
             <link align="MIDDLE_LEFT"
                   caption="GitHub"
+                  target="_blank"
                   url="https://github.com/vinayakjadhav/jRCarousel"/>
         </hbox>
 
